@@ -1,0 +1,129 @@
+@import "../global.scss";
+@import "../settings/_index.scss";
+@import "../block/_header.scss";
+@import "../block/_footer.scss";
+@import "../block/_banner.scss";
+
+.btn-icon_bell,
+.btn-icon_mail,
+.registr-reg{
+  display: block;
+}
+
+.btn-icon_cart{
+  .cart-count{
+    display: block;
+}
+}
+
+.profile-info_holder{
+  display: flex;
+}
+
+.btn-login,
+.noregistr-reg{
+  display: none;
+}
+
+.visual-section{
+  padding: 80px 0 95px;
+  h1{
+    display: none;
+}
+}
+
+.personal-info_section{
+  background-color: #f4f6f5;
+  padding-bottom: 152px;
+
+  .personal-info_container{
+    padding: 15px;
+    width: 100%;
+
+    .aside-opener, .aside-close{
+      display: none;
+    }
+
+    .aside-list_info{
+      margin-right: 30px;
+      width: 270px;
+      height: 250px;
+      border: 1px solid #d7d7d7;
+      background-color: $white;
+
+      ul{
+        li{
+          border-bottom: 1px solid #d7d7d7;
+          padding: 0 25px;
+          line-height: 49px;
+          font-size: $f-size-base;
+          font-weight: 500;
+          color: #707070;
+
+          i{
+            color: #444444;
+            padding-right: 25px;
+          }
+        }
+        li:last-child{
+          border-bottom: none;
+        }
+        li:hover{
+          border-bottom: 2px solid $green;
+          a{
+            color: #37474f;
+          }
+          i{
+            color: $green;
+          }
+        }
+      }
+    }
+    .personal-info{
+      width: 100%;
+      background-color: $white;
+      border: 1px solid #d7d7d7;
+
+      .personal-info_title{
+        padding: 20px 40px;
+        color: $dark-grey;
+        line-height: 60px;
+        border-bottom: 1px solid #d7d7d7;
+      }
+
+      .form-info{
+        font-size: $default-font;
+        line-height: 60px;
+        padding: 35px 40px;
+        color: #444444;
+
+        .form-info_line{
+          margin-bottom: 20px;
+
+          input, select{
+            width: 540px;
+            height: 40px;
+            background-color: #f9f9f9;
+            border: 0.2px solid #d7d7d7;
+            color: #707070;
+            padding-left: 15px;
+            outline: none;
+          }
+        }
+
+        .btn-form{
+          background-color: $green;
+          text-transform: none;
+          color: $white;
+          font-size: $default-font;
+          margin-left: 250px;
+          padding: 15px 20px;
+          width: 108px;
+        }
+      }
+    }
+  }
+}
+
+
+

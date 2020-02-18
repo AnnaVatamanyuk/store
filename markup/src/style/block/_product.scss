@@ -1,0 +1,300 @@
+@import "../global.scss";
+@import "../settings/_index.scss";
+
+%list-reset{
+  list-style: none;
+}
+
+.btn-main{
+  background-color: $white;
+  color: $dark-grey;
+
+  &:hover {
+    color: #546e7a;
+    box-shadow: 0 15px 15px -7px #ccc;
+  }
+}
+
+.product-button{
+
+  .btn-main{
+    padding: 20px 30px;
+
+    @include media('<=425px'){
+      padding: 10px 15px;
+      font-size: $f-size-base;
+    }
+  }
+
+  button + button{
+    margin-left: 10px;
+  }
+}
+
+.tabs-list{
+  @extend %list-reset;
+}
+
+.product{
+  &-section{
+    padding: 115px 0 110px;
+    background-color: #f4f6f5;
+
+    @include media('<=768px'){
+      padding: 100px 0 60px;
+    }
+
+    @include media('<=375px'){
+      padding: 80px 0 40px;
+    }
+
+    h2{
+      @include media('<=443px'){
+        font-size: $f-size-h4;
+      }
+    }
+  }
+
+
+  &-description{
+    padding: 30px;
+    border-bottom: 1px solid #e7ecf2;
+
+    @include media('<=768px'){
+      padding: 20px;
+    }
+
+    &_sort {
+      padding: 27px 22px;
+      border-bottom: 1px solid #e7ecf2;
+    }
+
+    &_sellers {
+      padding: 21px 0 0;
+    }
+  }
+
+  &-name{
+    font: 500 $f-size-h4 $rob_medium;
+    display: block;
+    margin: 0 0 15px;
+
+    &_sellers {
+      font: 700 16px $rob_medium;
+      margin: 0 0 12px;
+    }
+
+    &_sort {
+      font: 500 16px $rob_medium;
+      margin: 0 0 12px;
+    }
+  }
+
+  &-category{
+    font-size:$f-size-base;
+    color:$green;
+  }
+
+  &-price {
+
+    &_sort {
+      font-size: 20px;
+    }
+  }
+
+  &-reiting{
+    padding: 20px 30px;
+
+    @include media('<=355px'){
+      padding: 15px 10px;
+    }
+
+    .vendor-item{
+
+      .img-holder {
+        overflow: hidden;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        margin-right: 14px;
+        background-color: #b5b5b5;
+      }
+
+      span{
+        color: #546e7a;
+        font-size: $f-size-base;
+      }
+    }
+
+    &_holder{
+
+      .icon-holder{
+        margin-right: 14px;
+      }
+    }
+
+    &_text{
+      position: relative;
+      font-size: 12px;
+
+      &:before{
+        content: '(';
+        color: #b0bec5;
+      }
+
+      &:after{
+        content: ')';
+        color: #b0bec5;
+      }
+    }
+  }
+
+}
+
+.tabs-list{
+
+  @extend %list-reset;
+  margin: 0 0 30px;
+
+  @include media('<=768px'){
+    margin: 0 0 10px;
+  }
+
+  @include media('<=601px'){
+    margin: 0 95px 10px;
+  }
+
+  @include media('<=527px'){
+    margin: 0 55px 10px;
+  }
+
+  @include media('<=446px'){
+    margin: 0 40px 10px;
+  }
+
+  @include media('<=415px'){
+    margin: 0 20px 10px;
+  }
+
+  @include media('<=375px'){
+    margin: 0 15px 10px;
+  }
+
+  @include media('<=365px'){
+    margin: 0 0 10px;
+  }
+
+  li{
+    padding: 0 3px;
+
+    @include media('<=768px'){
+      margin-bottom: 5px;
+    }
+
+    @include media('<=550px'){
+      margin-bottom: 15px;
+      padding: 0 5px;
+    }
+
+    @include media('<=375px'){
+      padding: 0 2px;
+    }
+
+    &.active{
+      a{
+        outline: none;
+        font:500 $f-size-base $rob_medium;
+        background-color: $red;
+        color: $white;
+      }
+    }
+  }
+  a{
+    @include animate(color backgraund-color);
+    display: block;
+    padding: 10px 30px;
+    background-color: $white;
+    color: $dark_grey;
+
+    @include media('<=768px') {
+      padding: 10px 20px;
+    }
+
+
+    &:hover{
+      background-color: #da6e63;
+      color: $white;
+    }
+  }
+}
+
+.tabs-block{
+  padding: 30px 0;
+}
+
+.tab-col {
+  @include animate(box-shadow);
+
+  border: 1px solid #e7ecf2;
+  background-color: $white;
+  margin: 0 0 30px;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 15px 15px -7px #ccc;
+  }
+
+  &.hot-product {
+    position: relative;
+
+    &:before {
+      @include triangle(65px, $green, up-left);
+
+      position: absolute;
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+    }
+
+    &:after {
+      position: absolute;
+      color: $white;
+      display: inline-block;
+      content: '\f0e7';
+      -webkit-font-smoothing: antialiased;
+      font-style: normal;
+      font-variant: normal;
+      text-rendering: auto;
+      line-height: 1;
+      font-family: "Font Awesome 5 Free", sans-serif;
+      font-weight: 900;
+      top: 14px;
+      left: 14px;
+    }
+  }
+
+  .img-holder {
+    height: 250px;
+    background-color: $grey;
+
+    @include media('<=340px'){
+      height: 200px;
+    }
+  }
+
+  .img-holder {
+    height: 250px;
+    background-color: $grey;
+  }
+
+  .img-aside-holder {
+    height: 121px;
+    background-color: $grey;
+  }
+
+  .img-holder_sort {
+    height: 180px;
+    background-color: $grey;
+  }
+}

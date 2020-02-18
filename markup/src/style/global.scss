@@ -1,0 +1,487 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/reset-css/reset";
+@import "settings/_index.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $rob_regular, sans-serif;
+    color: $dark-grey;
+    background-color: $white;
+    font-size: $f-size-base;
+}
+
+h2{
+    font: 700 $f-size-h2 $rob_bold;
+    margin-bottom: 60px;
+
+    @include media('<=768px'){
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    @include media('<=660px'){
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    @include media('<=550px'){
+        font-size: 22px;
+    }
+
+    @include media('<=484px'){
+        font-size: 20px;
+    }
+}
+
+h3{
+    font: 500 $f-size-h3 $rob_medium;
+
+    @include media('<=900px'){
+        font-size: 20px;
+    }
+
+    @include media('<=788px'){
+        font-size: 19px;
+    }
+
+    @include media('<=750px'){
+        font-size: 17px;
+    }
+}
+
+.main {
+    background-color: $light-grey;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+address{
+    font-style: normal;
+}
+
+.row {
+    margin: 0 -15px;
+}
+
+.row:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col {
+    padding: 0 15px;
+
+    &-4{
+        width: calc(100% / 4);
+
+        @include media('<=1024px'){
+            width: calc(100% / 3);
+        }
+
+        @include media('<=768px'){
+            width: 50%;
+        }
+
+        @include media('<=700px'){
+            width: 100%;
+        }
+    }
+
+    &-3{
+        width: calc(100%/3);
+
+        @include media('<=768px'){
+            width: 50%;
+        }
+
+        @include media('<=700px'){
+            width: 100%;
+        }
+    }
+
+    &-2{
+        width: 50%;
+
+        @include media('<=700px'){
+            width: 100%;
+        }
+    }
+}
+
+.d-f{
+    display: flex;
+}
+
+.fw-w{
+    flex-wrap: wrap;
+}
+
+.jc-c{
+    justify-content: center;
+}
+
+.p-r{
+    position: relative;
+}
+
+.jc-sb{
+    justify-content: space-between;
+}
+
+.jc-sa{
+    justify-content: space-around;
+}
+
+.jc-fs{
+    justify-content: flex-start;
+}
+
+.jc-fe{
+    justify-content: flex-end;
+}
+
+.fd-c{
+    flex-direction: column;
+}
+
+.fd-r{
+    flex-direction: row;
+}
+
+.ai-c{
+    align-items: center;
+}
+
+.ai-b {
+    align-items: baseline;
+}
+
+.pos-r {
+    position: relative;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+
+    &-fluid{
+        max-width: 100%;
+    }
+}
+
+.breadcrumbs{
+    &-holder{
+        font-size: $default-font;
+        width: 100%;
+        padding: 40px 15px;
+    }
+
+    &-nav{
+        &_list{
+            margin:  0 -10px;
+
+            li{
+                position: relative;
+                padding: 0 10px;
+
+                a {
+                    color: #b0bec5;
+                }
+
+                a:hover{
+                    color: #78909c;
+                }
+
+                span {
+                    color: $dark-grey;
+                }
+
+                &:last-child{
+                    &:after{
+                        display: none;
+                    }
+                }
+
+                &:after{
+                    position: absolute;
+                    content: '-';
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: -4px;
+                    color: $green;
+                }
+            }
+        }
+    }
+}
+
+.btn{
+
+    &-holder{
+        @include media('<=375px'){
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+
+    &-form{
+        display: block;
+        color: $black;
+        background-color: $white;
+        border: none;
+        font-size: $f-size-base;
+        padding: 20px 43px;
+        width: 140px;
+        text-align: center;
+        margin: 10px 10px 10px 0;
+        text-transform: uppercase;
+
+        &:hover{
+            font-weight: 700;
+            font-family: $rob_bold;
+            padding: 18px 40px;
+            margin-left: 5px;
+            box-shadow: 0 7px 6px -2px rgba(38,50,56,0.3);
+        }
+
+        @include media('<=520px'){
+           padding: 13px 0;
+
+            &:hover{
+               padding: 10px 5px;
+            }
+        }
+
+        @include media('<=375px'){
+            width: 100%;
+            margin: 10px 0;
+        }
+    }
+
+    &-creat{
+        display: block;
+        position: relative;
+        width: calc(100% - 150px);
+        background-color: #76ae36;
+        color: $white;
+        font-size: $f-size-base;
+        text-align: center;
+        padding:  20px 36px;
+
+        &:hover{
+            color: #a7e758;
+        }
+
+        @include media('<=620px'){
+            padding: 20px 10px 20px 20px;
+        }
+
+        @include media('<=520px') {
+            padding: 9px 5px;
+            font-size: 12px;
+        }
+
+        @include media('<=375px'){
+            width: 100%;
+            padding: 5px;
+        }
+
+        i{
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            left: 35px;
+            color: inherit;
+
+            @include media('<=620px'){
+                left: 10px;
+            }
+
+            @include media('<=375px'){
+                left: 30px;
+            }
+        }
+    }
+}
+
+.login{
+    &-form{
+        max-width: 400px;
+        margin: 0 auto;
+
+        &_popup{
+           background-color: $green;
+           padding: 90px;
+            position: relative;
+            z-index: 1;
+
+            @include media('<=520px'){
+                padding: 40px 50px;
+            }
+
+            @include media('<=375px'){
+                padding: 40px 20px;
+            }
+
+            .lost-password{
+                color: $white;
+                font-size: $f-size-h4;
+                line-height: 30px;
+                padding-left: 80px;
+
+                &:hover{
+                    color: #a7e758;
+                }
+
+                @include media('<=768px'){
+                    padding-left: 15px;
+                }
+
+                @include media('<=620px'){
+                    padding-left: 10px;
+                    font-size: 16px;
+                }
+
+                @include media('<=520px') {
+                    font-size: $f-size-base;
+                    line-height: 22px;
+                    padding-left: 5px;
+                }
+
+                @include media('<=375px'){
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .input-holder{
+            width: 100%;
+            position: relative;
+            margin-bottom: 10px;
+
+            input{
+                @include placeholder{
+                    color: $white;
+                }
+
+                width: 100%;
+                background-color: #76ae36;
+                border: none;
+                height: 42px;
+                padding: 10px 40px;
+                color: $white;
+                outline: none;
+            }
+
+            i{
+                position: absolute;
+                left: 15px;
+                top:50%;
+                transform: translateY(-50%);
+                color: $white;
+            }
+        }
+    }
+
+    &-title{
+        display: block;
+        text-transform: uppercase;
+        color: $white;
+        font-size: $f-size-h1;
+        font-weight: 700;
+        font-family: $rob_bold;
+        line-height: 36px;
+        text-align: center;
+        margin-bottom: 42px;
+
+        @include media('<=375px'){
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.ui-dialog{
+    position: fixed !important;
+    outline: none;
+    margin: 0 auto;
+    z-index: 1000;
+
+    &:before{
+        position: fixed;
+        content: '';
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        background-color: $black;
+        opacity: .6;
+        z-index: -1;
+    }
+
+    .ui-button-icon-only{
+        font-size: 0 !important;
+        line-height: 0 !important;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: none;
+        color: $white;
+        position: absolute;
+        top: 20px;
+        right: 2px;
+        z-index: 2;
+        cursor: pointer;
+
+        .ui-button-icon-space{
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1 !important;
+            font-size: 16px !important;
+            font-family:"Font Awesome 5 Free", sans-serif;
+            font-weight: 900;
+            color: $white;
+
+            &:before{
+                content: "\f00d";
+            }
+        }
+    }
+}

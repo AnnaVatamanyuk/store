@@ -1,0 +1,166 @@
+@import "../global.scss";
+@import "../settings/_index.scss";
+
+.bg-block{
+  background-image: url("../../images/banner.png");
+  background-position: 50% 50%;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+.visual-section {
+  color: $white;
+  padding-top: 155px;
+
+  @include media('<=600px'){
+    padding-top: 100px;
+  }
+
+  @include media('<=405px'){
+    padding-top: 80px;
+  }
+
+  h1{
+    font: 700 48px $rob_bold;
+    margin-bottom: 35px;
+
+    @include media('<=768px'){
+      font-size: 40px;
+    }
+
+    @include media('<=640px'){
+      font-size: 30px;
+    }
+
+    @include media('<=483px'){
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    @include media('<=405px'){
+      font-size: 22px;
+    }
+
+    @include media('<=360px'){
+      font-size: 20px;
+    }
+
+    @include media('<=330px'){
+      font-size: 18px;
+    }
+  }
+
+  p{
+    font: 500 20px $rob_medium;
+    margin-bottom: 55px;
+
+    @include media('<=768px'){
+      font-size: 18px;
+    }
+
+    @include media('<=640px'){
+      font-size: 14px;
+    }
+
+    @include media('<=483px'){
+      font-size: 12px;
+      margin-bottom: 35px;
+    }
+
+    @include media('<=405px'){
+      font-size: 10px;
+    }
+
+    @include media('<=330px'){
+      font-size: 8px;
+    }
+  }
+
+  .items-text {
+    padding-top: 60px;
+    margin: 0 0 24px;
+  }
+
+  .items-form {
+    margin-bottom: 70px;
+  }
+
+  form{
+    margin-bottom: 175px;
+
+    .input-holder {
+      position: relative;
+      width: 670px;
+
+      @include media('<=768px'){
+        width: 555px;
+      }
+
+      @include media('<=640px'){
+        width: 440px;
+      }
+
+      @include media('<=640px'){
+        width: 340px;
+      }
+
+      @include media('<=405px'){
+        width: 300px;
+      }
+
+      @include media('<=360px'){
+        width: 250px;
+      }
+
+      img{
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include media('<=640px'){
+          width: 45px;
+        }
+
+        @include media('<=640px'){
+          width: 35px;
+        }
+      }
+
+      input {
+        @include animate(box-shadow);
+        @include placeholder {
+          color: #90a4ae;
+        }
+
+        padding: 15px 25px;
+        border: none;
+        width: 100%;
+        height: 60px;
+        box-shadow: 0 1px 10px rgba(100, 100, 100, 0.75);
+
+        @include media('<=768px'){
+          height: 55px;
+        }
+
+        @include media('<=640px'){
+          height: 45px;
+        }
+
+        @include media('<=483px'){
+          height: 35px;
+          font-size: 12px;
+        }
+
+        @include media('<=330px'){
+          font-size: 10px;
+        }
+
+        &:focus,
+        &:active {
+          box-shadow: 0 1px 10px rgba(124, 178, 64, 0.75);
+          outline: none;
+        }
+      }
+    }
+  }
+}

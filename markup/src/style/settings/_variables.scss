@@ -1,0 +1,55 @@
+// --------------------- Colors
+
+$white: #fff;
+$red: #e74c3c;
+$black: #000;
+$gray: #49505a;
+$blue: #21ace3;
+$green: #8bc34a;
+$dark-grey:#263238;
+$orange:#ffa726;
+$grey:#d4d4d4;
+$light-grey:#f4f6f5;
+$marengo: #455a64;
+$background-grey:#b5b5b5;
+
+//----------------------- Fonts
+
+$nav-color: $gray;
+$nav-color-hover: darken($white, 25%);
+$bg-nav-color-hover: darken($nav-color, 10%);
+
+
+
+$rob_medium:'roboto-medium', sans-serif;
+$rob_regular:'roboto-regular', sans-serif;
+$rob_bold:'roboto-bold', sans-serif;
+$rob_light:'roboto-light', sans-serif;
+$lato: 'lato-semibold', sans-serif;
+$ralew_bold: 'raleway-bold', sans-serif;
+$op-semibold: 'opensans-semibold', sans-serif;
+
+$bg-color-base: $white;
+$bg-color-add: $light-grey;
+
+$text-color: $gray;
+$heading-color: $dark-grey;
+
+
+//------------------------ Buttons
+$btn-red-bg: $red;
+$btn-red-bg-hover: darken($btn-red-bg, 10%);
+
+$btn-green-bg: $green;
+$btn-green-bg-hover: darken($green, 10%);
+
+//--------------------- Fonts size
+
+$default-font:15px;
+$f-size-base: 14px;
+$line-height-base: 1.2;
+$f-size-h1: 48px;
+$f-size-h2: 36px;
+$f-size-h3: 24px;
+$f-size-h4: 18px;
+

@@ -1,0 +1,83 @@
+@import "../global.scss";
+@import "../settings/_index.scss";
+@import "../block/_banner.scss";
+@import "../block/_product.scss";
+@import "../block/_header.scss";
+@import "../block/_footer.scss";
+
+
+.visual-section{
+  padding: 80px 0 95px;
+  h1{
+    display: none;
+  }
+}
+
+.products {
+  &-name_info {
+    color: #707070;
+  }
+
+  &-details {
+    border: 1px solid #dcdcdc;
+    margin-bottom: 30px;
+  }
+  &-banner {
+    padding: 20px
+  }
+
+  &-name_about {
+    padding-bottom: 13px;
+    color : #263238;
+  }
+
+  &-text {
+    text-align: left;
+    font-size: 14px;
+  }
+
+}
+
+.information-author {
+  border: 1px solid #dcdcdc;
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+.information-author .col.col-4 {
+  padding: 15px 0;
+  border-right: 1px solid #dcdcdc;
+}
+
+.about {
+  border: 1px solid #dcdcdc;
+  padding: 50px 45px;
+  max-width: 870px;
+
+  p {
+    padding-bottom: 50px;
+    color: #707070;
+    font-size: 15px;
+  }
+
+  span {
+    font-style: normal;
+  }
+
+  &-text_holder {
+    font-size: 20px;
+    padding-bottom: 30px;
+    color: #263238;
+    font-weight: 800;
+
+  }
+  &-skill {
+    padding-bottom: 14px;
+    padding-top: 23px;
+    font-style: italic;
+    font-size: 16px;
+    color: #263238;
+    font-weight: 600;
+  }
+}
+
